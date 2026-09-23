@@ -67,7 +67,9 @@ export const login = async (req, res, next) => {
     });
 
     res.json({
-      message: "register success.",
+      // This read "register success." — copied from the handler above — so every successful sign-in
+      // told the user an account had been created.
+      message: "login success.",
       user: {
         _id: user._id,
         name: user.name,
