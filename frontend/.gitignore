@@ -23,3 +23,8 @@ yarn-error.log*
 
 # Vercel CLI link metadata (machine-local)
 .vercel
+
+# This project is pinned by yarn.lock. Running `npm install` here generates a competing lockfile
+# (and rewrites every resolved URL in yarn.lock from registry.yarnpkg.com to registry.npmjs.org),
+# which is noise in review and gives Vercel two lockfiles to choose between. Keep it out.
+/package-lock.json
